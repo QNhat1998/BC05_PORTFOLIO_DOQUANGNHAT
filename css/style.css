@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hind', sans-serif;
+    color: #212529;
+    line-height: 1.5;
+    background-color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+
+}
+
+.container {
+    max-width: 1140px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.heading {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 750px;
+}
+
+.heading h2 {
+    font-size: 36px;
+    line-height: 42px;
+    color: #1a1d2d;
+    font-weight: 600;
+}
+
+.heading p {
+    color: #585858;
+    line-height: 24px;
+}
+
+/* HEADER */
+header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 100;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+header .navbar .navbar-brand {
+    font-size: 36px;
+    color: #fff;
+}
+
+header .navbar .navbar-brand i {
+    font-size: 45px;
+    color: #35a22c;
+}
+
+.navbar .navbar-nav .nav-item {
+    margin: 0 10px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #fff;
+    transition: all .5s;
+}
+
+.navbar .navbar-nav .nav-item::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #35a22c;
+    display: block;
+    transition: all .5s;
+}
+
+.navbar .navbar-nav .nav-item:hover a {
+    color: #35a22c;
+}
+
+.navbar .navbar-nav .nav-item:hover::after {
+    width: 100%;
+}
+
+.navbar .navbar-nav .nav-item.active .nav-link {
+    color: #35a22c;
+}
+
+.navbar .navbar-nav .nav-item.active::after {
+    width: 100%;
+}
+
+header .navbar-toggler {
+    background-color: #35a22c;
+}
+
+header .navbar .collapse.show .nav-link {
+    color: #35a22c;
+}
+
+/* CAROUSEL */
+#carouselPort .carousel-item {
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#carouselPort .carousel-indicators {
+    bottom: 10%;
+}
+
+#carouselPort button {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: none;
+}
+
+#carouselPort button.active {
+    background-color: #35a22c;
+}
+
+#carouselPort .carousel-item:nth-child(1) {
+    background-image: url(../img/306775914_464418569034749_8761406208205321121_n.jpg);
+}
+
+#carouselPort .carousel-item:nth-child(2) {
+    background-image: url(../img/mountains.jpg);
+}
+
+#carouselPort .carousel-item:nth-child(3) {
+    background-image: url(../img/mountains-1.jpg);
+}
+
+#carouselPort .carousel-item .overlay_carousel {
+    background: rgba(39, 43, 54, .5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#carouselPort .carousel-item .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 15%;
+    bottom: 20px;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.carousel-item .carousel-caption img {
+    width: 140px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.carousel-item .carousel-caption h5 {
+    font-size: 56px;
+    line-height: 65px;
+}
+
+.carousel-item .carousel-caption p {
+    font-size: 24px;
+}
+
+/* PROJECT */
+.project .nav-pills .nav-link {
+    color: #1a1d2d;
+    border: 1px solid #1a1d2d;
+    margin: 0 5px;
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+}
+
+.project .nav-pills .nav-link.active {
+    background-color: #35a22c;
+    color: #fff;
+    border-color: #35a22c;
+}
+
+.project .projects_item {
+    margin-top: 30px;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 0.4rem rgb(0 0 0 / 13%);
+    border: none;
+    cursor: pointer;
+}
+
+.project .card-body h3 {
+    font-size: 1.25rem;
+}
+
+.projects_item .card-body {
+    border: 1px solid transparent;
+    border-radius: 0 0 1rem 1rem;
+    transition: all 0.5s;
+}
+
+.project .card-body p {
+    color: #585858;
+    margin-bottom: 16px;
+}
+
+.projects_item:hover h3 {
+    color: #35a22c
+}
+
+.projects_item:hover .card-body {
+    border-color: #35a22c;
+    border-top-color: transparent;
+}
+
+/* FEATURE */
+.feature {
+    background: linear-gradient(rgba(7, 10, 12, .72), rgba(7, 10, 12, .72)), url(../img/3.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0 120px;
+    background-attachment: fixed;
+    position: relative;
+    box-shadow: inset 0 0 0 100%;
+}
+
+.feature .feature_item {
+    padding: 40px 40px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .1);
+    backdrop-filter: blur(3px);
+    transition: all .5s;
+}
+
+.feature_item i {
+    font-size: 48px;
+    color: #35a22c;
+}
+
+.feature_item h4 {
+    font-size: 20px;
+    color: #fff;
+    line-height: 30px;
+    padding-top: 25px;
+    font-weight: 700;
+}
+
+.feature_item p {
+    padding-top: 15px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+}
+
+.feature_item:hover {
+    background: #000;
+    border-color: #fff;
+}
+
+/* AWARD */
+.award {
+    background-image: url(../img/memphis_3.png);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    padding: 70px 0;
+}
+
+.award .award_left {
+    background: rgba(255, 255, 255, .25);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, .18);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 30px 0 rgb(0 0 0 / 30%);
+    padding: 45px;
+}
+
+.award .award_right {
+    padding: 45px 0;
+}
+
+/* FOOTER */
+footer {
+    background-color: #222;
+}
+
+footer a {
+    color: #aaa;
+}
+
+.footer_top a i {
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 50%;
+    border: 1px solid #454545;
+    transition: all 0.5s;
+}
+
+.footer_top a:hover i {
+    border-color: #35a22c;
+    color: #35a22c;
+}
+
+.footer_bottom {
+    border-top: 1px solid #454545;
+    padding-top: 30px;
+    margin-top: 30px;
+}
+
+.footer_bottom p {
+    color: #aaa;
+}
+
+.footer_bottom a:hover {
+    color: #35a22c
+}
+
+@media screen and (max-width: 991.98px) {
+
+    header .navbar-collapse {
+        background-color: #fff;
+    }
+
+    .navbar .navbar-nav .nav-item.active::after {
+        width: 0;
+    }
+    #carouselPort .carousel-caption img {
+        width: 100px;
+    }
+
+    #carouselPort .carousel-caption h5 {
+        font-size: 5vw;
+        line-height: 5vw;
+    }
+
+    #carouselPort .carousel-caption p{
+        font-size: 3vw;
+    }
+}
